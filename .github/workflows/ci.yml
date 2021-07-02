@@ -37,12 +37,13 @@ jobs:
 
       - shell: bash
         env:
-          SUPER_SECRET: ${{ secrets.SUPERSECRET }}
+          SUPER_SECRET: ${{ secrets.ABC }}
         run: |
           pwd
           ls -la
           chmod +x test.sh
           ./test.sh "$SUPER_SECRET"
-          ./test.sh "${{ secrets.SUPERSECRET }}"
+          ./test.sh "${{ secrets.ABC }}"
           cat test.txt
           ls -la
+          env
