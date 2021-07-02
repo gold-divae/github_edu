@@ -39,6 +39,8 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SUPERSECRET }}
         run: |
+          pwd
+          ls -la
           chmod +x test.sh
           ./test.sh "$SUPER_SECRET"
           ./test.sh "${{ secrets.SUPERSECRET }}"
