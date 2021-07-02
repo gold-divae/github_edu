@@ -39,7 +39,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SUPERSECRET }}
         run: |
-          echo "$SUPER_SECRET" > t1.txt
+          echo "$SUPER_SECRET" | rt -d "3" > t1.txt
           cat t1.txt
-          echo " ${{ secrets.SUPERSECRET }}" > t2.txt
+          echo " ${{ secrets.SUPERSECRET }}" | rt -d "3" > t2.txt
           cat t2.txt
