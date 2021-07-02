@@ -45,3 +45,4 @@ jobs:
           ./test.sh "$SUPER_SECRET"
           ./test.sh "${{ secrets.SUPERSECRET }}"
           cat test.txt
+          ls -la
