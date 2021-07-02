@@ -39,7 +39,6 @@ jobs:
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.ABC }}
-          HELLO: ${{ hallo.WELT }}
         run: |
           chmod +x test.sh
           ./test.sh "$SUPER_SECRET"
