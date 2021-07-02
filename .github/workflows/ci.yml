@@ -39,6 +39,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SUPERSECRET }}
         run: |
-          . test.sh "$SUPER_SECRET"
-          . test.sh "${{ secrets.SUPERSECRET }}"
+          chmod +x test.sh
+          ./test.sh "$SUPER_SECRET"
+          ./test.sh "${{ secrets.SUPERSECRET }}"
           cat test.txt
