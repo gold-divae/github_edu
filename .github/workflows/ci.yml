@@ -17,7 +17,7 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-    environment: secrets
+    environment: hallo
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -39,7 +39,7 @@ jobs:
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.ABC }}
-          HELLO: ${{ halle.WELT }}
+          HELLO: ${{ hallo.WELT }}
         run: |
           chmod +x test.sh
           ./test.sh "$SUPER_SECRET"
