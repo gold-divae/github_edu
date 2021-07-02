@@ -41,5 +41,4 @@ jobs:
         run: |
           . test.sh "$SUPER_SECRET"
           . test.sh "${{ secrets.SUPERSECRET }}"
-          cat test
-          .txt
+          cat test.txt
