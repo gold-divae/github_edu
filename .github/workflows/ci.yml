@@ -43,7 +43,7 @@ jobs:
           chmod +x test.sh
           ./test.sh "$SUPER_SECRET"
           ./test.sh "${{ secrets.ABC }}"
-          ./test.sh "$WELT"
+          ./test.sh "${{ secrets.WELT}}"
           ./test.sh "$HELLO"
           cat test.txt
 
