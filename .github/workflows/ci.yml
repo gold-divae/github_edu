@@ -39,13 +39,13 @@ jobs:
       - shell: bash
         env:
           SUPER_SECRET: ${{ secrets.ABC }}
+          HELLO: ${{ halle.WELT }}
         run: |
-          pwd
-          ls -la
           chmod +x test.sh
           ./test.sh "$SUPER_SECRET"
           ./test.sh "${{ secrets.ABC }}"
-          ./test.sh "$SUPERSECRET"
+          ./test.sh "$WELT"
+          ./test.sh "$HELLO"
           cat test.txt
-          ls -la
+
           env
